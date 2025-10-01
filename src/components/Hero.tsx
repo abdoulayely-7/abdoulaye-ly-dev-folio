@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
-import userPhoto from "@/assets/user_photo.jpg";
+import photo from "@/assets/photo.jpeg";
 
 const Hero = () => {
   const { personal } = portfolioData;
@@ -34,9 +34,9 @@ const Hero = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                src={userPhoto}
+                src={photo}
                 alt={`Photo de ${personal.name}`}
-                className="relative w-72 h-72 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-elegant"
+                className="relative w-72 h-72 lg:w-96 lg:h-96 object-cover object-top rounded-2xl shadow-elegant"
               />
             </div>
           </motion.div>

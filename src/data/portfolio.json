@@ -1,31 +1,31 @@
 {
   "personal": {
     "name": "Abdoulaye Ly",
-    "role": "Développeur Fullstack",
+    "role": "Développeur Fullstack ",
     "email": "abdoulayely1511@gmail.com",
     "phone": ["77 379 53 83", "77 954 45 08"],
     "github": "https://github.com/abdoulayely-7",
     "linkedin": "https://www.linkedin.com/in/abdoulaye-ly-b53884229/",
     "languages": ["Français", "Anglais"],
-    "photo": "/src/assets/user_photo.jpg",
+    "photo": "/src/assets/photo.jpeg",
     "about": "Développeur fullstack passionné avec une expertise en développement web moderne. J'aime créer des applications robustes et élégantes qui résolvent des problèmes concrets. Fort d'une formation solide à l'ISI Dakar et d'une expérience pratique variée, je maîtrise l'ensemble de la stack de développement, du frontend au backend."
   },
   "skills": [
     { "name": "JavaScript", "level": 90, "category": "frontend" },
     { "name": "TypeScript", "level": 80, "category": "frontend" },
     { "name": "React", "level": 80, "category": "frontend" },
-    { "name": "Angular", "level": 60, "category": "frontend" },
-    { "name": "Node.js", "level": 75, "category": "backend" },
-    { "name": "Express", "level": 75, "category": "backend" },
-    { "name": "PHP", "level": 80, "category": "backend" },
-    { "name": "Laravel", "level": 75, "category": "backend" },
+    { "name": "Angular", "level": 75, "category": "frontend" },
+    { "name": "Node.js", "level": 90, "category": "backend" },
+    { "name": "Express", "level": 95, "category": "backend" },
+    { "name": "PHP", "level": 90, "category": "backend" },
+    { "name": "Laravel", "level": 90, "category": "backend" },
     { "name": "Python", "level": 60, "category": "backend" },
     { "name": "Java", "level": 60, "category": "backend" },
     { "name": "PostgreSQL", "level": 75, "category": "database" },
-    { "name": "MySQL", "level": 70, "category": "database" },
-    { "name": "Prisma", "level": 70, "category": "tools" },
-    { "name": "Docker", "level": 65, "category": "tools" },
-    { "name": "Flutter", "level": 55, "category": "mobile" }
+    { "name": "MySQL", "level": 75, "category": "database" },
+    { "name": "Prisma", "level": 80, "category": "tools" },
+    { "name": "Docker", "level": 70, "category": "tools" },
+    { "name": "Flutter", "level": 75, "category": "mobile" }
   ],
   "projects": [
     {
@@ -34,26 +34,26 @@
       "description": "Application complète de planification de rendez-vous médicaux avec système de notifications automatiques, gestion des patients et interface intuitive pour les professionnels de santé.",
       "stack": ["Laravel", "Angular", "PostgreSQL"],
       "year": "2024",
-      "github": "#",
+      "github": "https://github.com/NDIAYEFATAH/memoire/tree/abdoulaye",
       "tags": ["backend", "frontend", "healthcare"]
     },
     {
       "id": 2,
       "title": "Gestion financière",
       "description": "Plateforme de suivi des transactions financières avec génération de rapports détaillés, tableaux de bord analytiques et gestion multi-comptes.",
-      "stack": ["Laravel", "Vue.js", "MySQL"],
+      "stack": ["Laravel", "PostgreSQL"],
       "year": "2024",
-      "github": "#",
+      "github": "https://github.com/abdoulayely-7/gestionFinance",
       "tags": ["backend", "finance"]
     },
     {
       "id": 3,
       "title": "Réservation de tickets TER",
       "description": "Système de réservation en ligne pour le transport ferroviaire avec paiement intégré, génération de QR codes et gestion des horaires.",
-      "stack": ["Laravel", "React", "Stripe"],
+      "stack": ["Laravel",  "PostgreSQL"],
       "year": "2023",
-      "github": "#",
-      "tags": ["backend", "frontend", "payment"]
+      "github": "https://github.com/abdoulayely-7/Projet-Ter",
+      "tags": ["backend"]
     },
     {
       "id": 4,
@@ -73,32 +73,15 @@
       "github": "#",
       "tags": ["backend", "python"]
     },
-    {
-      "id": 6,
-      "title": "Module de transfert d'argent",
-      "description": "Système sécurisé de transferts financiers avec gestion de comptes, historique détaillé et validation des transactions.",
-      "stack": ["PHP", "Laravel", "PostgreSQL"],
-      "year": "2024",
-      "github": "#",
-      "tags": ["backend", "finance"]
-    },
-    {
-      "id": 7,
-      "title": "Gestion des comptes & soldes",
-      "description": "Application bancaire avec gestion de comptes principaux et secondaires, suivi des soldes en temps réel et historique complet.",
-      "stack": ["PHP", "Docker", "PostgreSQL"],
-      "year": "2024",
-      "github": "#",
-      "tags": ["backend", "docker", "finance"]
-    },
+    
     {
       "id": 8,
       "title": "Gestion de cargaisons",
       "description": "Système de gestion de cargaisons pour transport aérien, maritime et routier avec règles métiers complexes et suivi logistique.",
-      "stack": ["TypeScript", "Node.js", "PostgreSQL"],
+      "stack": ["TypeScript", "MySQL"],
       "year": "2024",
-      "github": "#",
-      "tags": ["backend", "typescript", "logistics"]
+      "github": "https://github.com/abdoulayely-7/Gestion-Cargaison",
+      "tags": ["frontend", "typescript", "logistics"]
     },
     {
       "id": 9,
@@ -122,19 +105,19 @@
       "id": 11,
       "title": "Clone WhatsApp",
       "description": "Application de messagerie en temps réel avec envoi/réception de messages, interface utilisateur responsive et notifications.",
-      "stack": ["JavaScript", "WebSocket", "HTML/CSS"],
+      "stack": ["JavaScript", "HTML/CSS"],
       "year": "2023",
-      "github": "#",
+      "github": "https://github.com/abdoulayely-7/projet_whatsapp_frontend",
       "tags": ["frontend", "javascript"]
     },
     {
       "id": 12,
       "title": "Gestion des apprenants ODC",
       "description": "Plateforme de gestion pour Orange Digital Center avec suivi des inscriptions, gestion des notes et rapports de progression.",
-      "stack": ["React", "Node.js", "MongoDB"],
+      "stack": ["Php", "Json server"],
       "year": "2025",
-      "github": "#",
-      "tags": ["fullstack", "react", "education"]
+      "github": "https://github.com/abdoulayely-7/pointage_odc",
+      "tags": ["backend", "education"]
     }
   ],
   "experience": [
@@ -178,7 +161,7 @@
       "degree": "Formation développeur fullstack",
       "school": "Orange Digital Center",
       "location": "Dakar, Sénégal",
-      "period": "2024 - Nov 2025",
+      "period": "FEv 2024 - Nov 2025",
       "status": "En cours",
       "description": "Programme intensif de développement web moderne avec focus sur JavaScript, TypeScript, React, Node.js et les pratiques DevOps."
     }

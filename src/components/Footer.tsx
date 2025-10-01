@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Download, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Heart, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
 
@@ -88,8 +88,8 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} {personal.name}. Créé avec{" "}
-            <Heart className="h-4 w-4 text-primary fill-primary" /> et React
+            © {currentYear} {personal.name}. Créé par{" "}
+            <Code className="h-4 w-4 text-primary fill-primary" />  LyDevTech<Code className="h-4 w-4 text-primary fill-primary" />
           </p>
         </div>
       </div>
