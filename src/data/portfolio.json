@@ -1,0 +1,186 @@
+{
+  "personal": {
+    "name": "Abdoulaye Ly",
+    "role": "Développeur Fullstack",
+    "email": "abdoulayely1511@gmail.com",
+    "phone": ["77 379 53 83", "77 954 45 08"],
+    "github": "https://github.com/abdoulayely-7",
+    "linkedin": "https://www.linkedin.com/in/abdoulaye-ly-b53884229/",
+    "languages": ["Français", "Anglais"],
+    "photo": "/src/assets/user_photo.jpg",
+    "about": "Développeur fullstack passionné avec une expertise en développement web moderne. J'aime créer des applications robustes et élégantes qui résolvent des problèmes concrets. Fort d'une formation solide à l'ISI Dakar et d'une expérience pratique variée, je maîtrise l'ensemble de la stack de développement, du frontend au backend."
+  },
+  "skills": [
+    { "name": "JavaScript", "level": 90, "category": "frontend" },
+    { "name": "TypeScript", "level": 80, "category": "frontend" },
+    { "name": "React", "level": 80, "category": "frontend" },
+    { "name": "Angular", "level": 60, "category": "frontend" },
+    { "name": "Node.js", "level": 75, "category": "backend" },
+    { "name": "Express", "level": 75, "category": "backend" },
+    { "name": "PHP", "level": 80, "category": "backend" },
+    { "name": "Laravel", "level": 75, "category": "backend" },
+    { "name": "Python", "level": 60, "category": "backend" },
+    { "name": "Java", "level": 60, "category": "backend" },
+    { "name": "PostgreSQL", "level": 75, "category": "database" },
+    { "name": "MySQL", "level": 70, "category": "database" },
+    { "name": "Prisma", "level": 70, "category": "tools" },
+    { "name": "Docker", "level": 65, "category": "tools" },
+    { "name": "Flutter", "level": 55, "category": "mobile" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Gestion de rendez-vous médicaux",
+      "description": "Application complète de planification de rendez-vous médicaux avec système de notifications automatiques, gestion des patients et interface intuitive pour les professionnels de santé.",
+      "stack": ["Laravel", "Angular", "PostgreSQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "frontend", "healthcare"]
+    },
+    {
+      "id": 2,
+      "title": "Gestion financière",
+      "description": "Plateforme de suivi des transactions financières avec génération de rapports détaillés, tableaux de bord analytiques et gestion multi-comptes.",
+      "stack": ["Laravel", "Vue.js", "MySQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "finance"]
+    },
+    {
+      "id": 3,
+      "title": "Réservation de tickets TER",
+      "description": "Système de réservation en ligne pour le transport ferroviaire avec paiement intégré, génération de QR codes et gestion des horaires.",
+      "stack": ["Laravel", "React", "Stripe"],
+      "year": "2023",
+      "github": "#",
+      "tags": ["backend", "frontend", "payment"]
+    },
+    {
+      "id": 4,
+      "title": "Gestion immobilière",
+      "description": "Application de gestion de biens immobiliers avec publication d'annonces, recherche avancée et tableau de bord pour propriétaires.",
+      "stack": ["Java JEE", "JSF", "MySQL"],
+      "year": "2023",
+      "github": "#",
+      "tags": ["backend", "java"]
+    },
+    {
+      "id": 5,
+      "title": "Gestion de contacts",
+      "description": "Carnet d'adresses intelligent avec import/export CSV, recherche avancée et organisation par groupes personnalisés.",
+      "stack": ["Python", "Flask", "SQLite"],
+      "year": "2023",
+      "github": "#",
+      "tags": ["backend", "python"]
+    },
+    {
+      "id": 6,
+      "title": "Module de transfert d'argent",
+      "description": "Système sécurisé de transferts financiers avec gestion de comptes, historique détaillé et validation des transactions.",
+      "stack": ["PHP", "Laravel", "PostgreSQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "finance"]
+    },
+    {
+      "id": 7,
+      "title": "Gestion des comptes & soldes",
+      "description": "Application bancaire avec gestion de comptes principaux et secondaires, suivi des soldes en temps réel et historique complet.",
+      "stack": ["PHP", "Docker", "PostgreSQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "docker", "finance"]
+    },
+    {
+      "id": 8,
+      "title": "Gestion de cargaisons",
+      "description": "Système de gestion de cargaisons pour transport aérien, maritime et routier avec règles métiers complexes et suivi logistique.",
+      "stack": ["TypeScript", "Node.js", "PostgreSQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "typescript", "logistics"]
+    },
+    {
+      "id": 9,
+      "title": "Application de gestion des salaires",
+      "description": "Plateforme multi-entreprises de gestion RH avec génération automatique de bulletins de paie, suivi des employés et historiques détaillés.",
+      "stack": ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["fullstack", "typescript", "react"]
+    },
+    {
+      "id": 10,
+      "title": "API backend Node.js avancée",
+      "description": "API REST sécurisée avec architecture en couches, validations Zod, authentification JWT et documentation Swagger.",
+      "stack": ["Node.js", "TypeScript", "Prisma", "Zod"],
+      "year": "2024",
+      "github": "#",
+      "tags": ["backend", "typescript", "api"]
+    },
+    {
+      "id": 11,
+      "title": "Clone WhatsApp",
+      "description": "Application de messagerie en temps réel avec envoi/réception de messages, interface utilisateur responsive et notifications.",
+      "stack": ["JavaScript", "WebSocket", "HTML/CSS"],
+      "year": "2023",
+      "github": "#",
+      "tags": ["frontend", "javascript"]
+    },
+    {
+      "id": 12,
+      "title": "Gestion des apprenants ODC",
+      "description": "Plateforme de gestion pour Orange Digital Center avec suivi des inscriptions, gestion des notes et rapports de progression.",
+      "stack": ["React", "Node.js", "MongoDB"],
+      "year": "2025",
+      "github": "#",
+      "tags": ["fullstack", "react", "education"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Stage de développement",
+      "company": "INSERSITE",
+      "type": "Stage en ligne",
+      "duration": "3 mois",
+      "period": "2024",
+      "description": "Stage de développement web fullstack avec participation à des projets réels et apprentissage des méthodologies agiles.",
+      "highlights": [
+        "Développement de fonctionnalités frontend et backend",
+        "Collaboration en équipe distante",
+        "Utilisation de technologies modernes"
+      ]
+    },
+    {
+      "title": "Formation développeur fullstack",
+      "company": "Orange Digital Center",
+      "type": "Formation intensive",
+      "duration": "En cours",
+      "period": "2024 - Nov 2025",
+      "description": "Formation complète en développement web et mobile avec focus sur les technologies actuelles et les bonnes pratiques de l'industrie.",
+      "highlights": [
+        "Stack JavaScript moderne (React, Node.js)",
+        "Architecture et conception logicielle",
+        "Projets pratiques et portfolio"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Licence en Informatique",
+      "school": "Institut Supérieur d'Informatique (ISI)",
+      "location": "Dakar, Sénégal",
+      "period": "2021 - 2024",
+      "status": "Diplôme obtenu en 2024",
+      "description": "Formation complète en informatique couvrant les fondamentaux de la programmation, les bases de données, le génie logiciel et le développement web."
+    },
+    {
+      "degree": "Formation développeur fullstack",
+      "school": "Orange Digital Center",
+      "location": "Dakar, Sénégal",
+      "period": "2024 - Nov 2025",
+      "status": "En cours",
+      "description": "Programme intensif de développement web moderne avec focus sur JavaScript, TypeScript, React, Node.js et les pratiques DevOps."
+    }
+  ]
+}
