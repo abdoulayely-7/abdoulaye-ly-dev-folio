@@ -17,12 +17,21 @@ const Footer = () => {
             </h3>
             <p className="text-muted-foreground mb-4">{personal.role}</p>
             <Button
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Télécharger mon CV
-            </Button>
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
+              >
+                <a
+                  href="/CV_Abdoulaye_Ly.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Télécharger CV
+                </a>
+              </Button>
           </div>
 
           {/* Quick Links */}

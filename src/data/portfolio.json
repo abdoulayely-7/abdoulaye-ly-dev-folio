@@ -4,6 +4,7 @@
     "role": "Développeur Fullstack ",
     "email": "abdoulayely1511@gmail.com",
     "phone": ["77 379 53 83", "77 954 45 08"],
+    "WhatsApp":"https://api.whatsapp.com/send/?phone=+221773795383&text=Salut+Abdoulaye",
     "github": "https://github.com/abdoulayely-7",
     "linkedin": "https://www.linkedin.com/in/abdoulaye-ly-b53884229/",
     "languages": ["Français", "Anglais"],
@@ -14,33 +15,35 @@
     { "name": "JavaScript", "level": 90, "category": "frontend" },
     { "name": "TypeScript", "level": 80, "category": "frontend" },
     { "name": "React", "level": 80, "category": "frontend" },
-    { "name": "Angular", "level": 75, "category": "frontend" },
+    { "name": "Angular", "level": 85, "category": "frontend" },
     { "name": "Node.js", "level": 90, "category": "backend" },
     { "name": "Express", "level": 95, "category": "backend" },
-    { "name": "PHP", "level": 90, "category": "backend" },
-    { "name": "Laravel", "level": 90, "category": "backend" },
-    { "name": "Python", "level": 60, "category": "backend" },
-    { "name": "Java", "level": 60, "category": "backend" },
+    { "name": "PHP", "level": 95, "category": "backend" },
+    { "name": "Laravel", "level": 95, "category": "backend" },
+    { "name": "Python", "level": 80, "category": "backend" },
+    { "name": "Java", "level": 90, "category": "backend" },
     { "name": "PostgreSQL", "level": 75, "category": "database" },
-    { "name": "MySQL", "level": 75, "category": "database" },
-    { "name": "Prisma", "level": 80, "category": "tools" },
-    { "name": "Docker", "level": 70, "category": "tools" },
+    { "name": "MySQL", "level": 85, "category": "database" },
+    { "name": "Prisma", "level": 85, "category": "tools" },
+    { "name": "Docker", "level": 75, "category": "tools" },
     { "name": "Flutter", "level": 75, "category": "mobile" }
   ],
+  
   "projects": [
     {
       "id": 1,
       "title": "Gestion de rendez-vous médicaux",
-      "description": "Application complète de planification de rendez-vous médicaux avec système de notifications automatiques, gestion des patients et interface intuitive pour les professionnels de santé.",
-      "stack": ["Laravel", "Angular", "PostgreSQL"],
+      "description": "Application innovante de planification de rendez-vous médicaux, avec notifications automatiques, gestion complète des patients, médecins, secrétaires et créneaux, interface intuitive pour les professionnels de santé, et un chatbot intégré pour assister les utilisateurs en temps réel",
+      "stack": ["Laravel", "Angular", "JWT", "PostgreSQL"],
       "year": "2024",
       "github": "https://github.com/NDIAYEFATAH/memoire/tree/abdoulaye",
-      "tags": ["backend", "frontend", "healthcare"]
+      "tags": ["backend", "frontend", "healthcare"],
+      "referent": "M. Matar Thioye Encadrant mémoire, ISI — +221 77 568 40 64"
     },
     {
       "id": 2,
       "title": "Gestion financière",
-      "description": "Plateforme de suivi des transactions financières avec génération de rapports détaillés, tableaux de bord analytiques et gestion multi-comptes.",
+      "description": "Plateforme de création et de gestion de comptes épargne et courant, offrant la possibilité de transférer des fonds entre comptes et un suivi clair des transactions pour une expérience utilisateur sécurisée et intuitive.",
       "stack": ["Laravel", "PostgreSQL"],
       "year": "2024",
       "github": "https://github.com/abdoulayely-7/gestionFinance",
@@ -49,77 +52,64 @@
     {
       "id": 3,
       "title": "Réservation de tickets TER",
-      "description": "Système de réservation en ligne pour le transport ferroviaire avec paiement intégré, génération de QR codes et gestion des horaires.",
-      "stack": ["Laravel",  "PostgreSQL"],
+      "description": "Système de réservation en ligne pour le transport ferroviaire avec génération de QR codes et gestion des horaires.",
+      "stack": ["Laravel", "PostgreSQL"],
       "year": "2023",
       "github": "https://github.com/abdoulayely-7/Projet-Ter",
       "tags": ["backend"]
     },
     {
       "id": 4,
-      "title": "Gestion immobilière",
-      "description": "Application de gestion de biens immobiliers avec publication d'annonces, recherche avancée et tableau de bord pour propriétaires.",
-      "stack": ["Java JEE", "JSF", "MySQL"],
-      "year": "2023",
-      "github": "#",
-      "tags": ["backend", "java"]
+      "title": "Gestion de cargaisons – GPduMonde",
+      "description": "Système de gestion de cargaisons pour transport aérien, maritime et routier avec suivi logistique et gestion multi-produits.",
+      "stack": ["JavaScript","TypeScript", "MySQL"],
+      "year": "2025",
+      "github": "https://github.com/abdoulayely-7/Gestion-Cargaison",
+      "tags": ["frontend", "javascript", "typescript", "logistics"],
+      "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
     },
     {
       "id": 5,
-      "title": "Gestion de contacts",
-      "description": "Carnet d'adresses intelligent avec import/export CSV, recherche avancée et organisation par groupes personnalisés.",
-      "stack": ["Python", "Flask", "SQLite"],
-      "year": "2023",
+      "title": "Application de gestion des salaires",
+      "description": "Plateforme multi-entreprises, offrant le calcul automatique des salaires, la génération des bulletins de paie, et le suivi complet de l’historique des paiements. L’application facilite la gestion administrative et réduit les erreurs liées au traitement manuel",
+      "stack": ["React", "TypeScript", "Node.js", "Express", "JWT", "Prisma", "PostgreSQL"],
+      "year": "2025",
       "github": "#",
-      "tags": ["backend", "python"]
+      "tags": ["fullstack", "typescript", "react"],
+      "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
     },
-    
+    {
+      "id": 6,
+      "title": "Clone WhatsApp",
+      "description": "Application de messagerie instantanée complète : envoi de messages texte, audio et images, gestion des contacts, notifications en temps réel, et expérience utilisateur fluide et moderne.",
+      "stack": ["JavaScript", "HTML/CSS"],
+      "year": "2025",
+      "github": "https://github.com/abdoulayely-7/projet_whatsapp_frontend",
+      "tags": ["frontend", "javascript"],
+      "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
+    },
+    {
+      "id": 7,
+      "title": "MaxitSA",
+      "description": "Maxitsa est un projet d’application de transfert d’argent. Elle permet aux utilisateurs d’envoyer et de recevoir des fonds de manière sécurisée, de suivre l’historique de leurs transactions, et de gérer leurs comptes de façon intuitive, offrant une solution pratique pour les paiements numériques.",
+      "stack": ["Php", "JavaScript","Docker","Render"],
+      "year": "2025",
+      "github": "https://github.com/abdoulayely-7/pointage_odc",
+      "tags": ["backend", "finance"],
+      "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
+    },
     {
       "id": 8,
-      "title": "Gestion de cargaisons",
-      "description": "Système de gestion de cargaisons pour transport aérien, maritime et routier avec règles métiers complexes et suivi logistique.",
-      "stack": ["TypeScript", "MySQL"],
-      "year": "2024",
-      "github": "https://github.com/abdoulayely-7/Gestion-Cargaison",
-      "tags": ["frontend", "typescript", "logistics"]
-    },
-    {
-      "id": 9,
-      "title": "Application de gestion des salaires",
-      "description": "Plateforme multi-entreprises de gestion RH avec génération automatique de bulletins de paie, suivi des employés et historiques détaillés.",
-      "stack": ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL"],
-      "year": "2024",
-      "github": "#",
-      "tags": ["fullstack", "typescript", "react"]
-    },
-    {
-      "id": 10,
-      "title": "API backend Node.js avancée",
-      "description": "API REST sécurisée avec architecture en couches, validations Zod, authentification JWT et documentation Swagger.",
-      "stack": ["Node.js", "TypeScript", "Prisma", "Zod"],
-      "year": "2024",
-      "github": "#",
-      "tags": ["backend", "typescript", "api"]
-    },
-    {
-      "id": 11,
-      "title": "Clone WhatsApp",
-      "description": "Application de messagerie en temps réel avec envoi/réception de messages, interface utilisateur responsive et notifications.",
-      "stack": ["JavaScript", "HTML/CSS"],
-      "year": "2023",
-      "github": "https://github.com/abdoulayely-7/projet_whatsapp_frontend",
-      "tags": ["frontend", "javascript"]
-    },
-    {
-      "id": 12,
       "title": "Gestion des apprenants ODC",
-      "description": "Plateforme de gestion pour Orange Digital Center avec suivi des inscriptions, gestion des notes et rapports de progression.",
+      "description": "Ce projet vise à digitaliser la gestion apprenants de Orange Digital Center. L’application permet d’enregistrer les apprenants, de suivre leur évolution (promotions, référentiel, notes, absences) et d’automatiser les tâches administratives liées à la formation. Elle a été conçue avec une architecture propre respectant les principes SOLID et MVC, garantissant une bonne maintenabilité et évolutivité du code.",
       "stack": ["Php", "Json server"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/pointage_odc",
-      "tags": ["backend", "education"]
+      "tags": ["backend", "education"],
+      "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
     }
   ],
+
   "experience": [
     {
       "title": "Stage de développement",
@@ -135,14 +125,14 @@
       ]
     },
     {
-      "title": "Formation développeur fullstack",
+      "title": "Développeur fullstack",
       "company": "Orange Digital Center",
       "type": "Formation intensive",
       "duration": "En cours",
       "period": "2024 - Nov 2025",
       "description": "Formation complète en développement web et mobile avec focus sur les technologies actuelles et les bonnes pratiques de l'industrie.",
       "highlights": [
-        "Stack JavaScript moderne (React, Node.js)",
+        "Stack JavaScript moderne (React, Node.js, Express, Angular, Laravel, Spring)",
         "Architecture et conception logicielle",
         "Projets pratiques et portfolio"
       ]
@@ -156,14 +146,6 @@
       "period": "2021 - 2024",
       "status": "Diplôme obtenu en 2024",
       "description": "Formation complète en informatique couvrant les fondamentaux de la programmation, les bases de données, le génie logiciel et le développement web."
-    },
-    {
-      "degree": "Formation développeur fullstack",
-      "school": "Orange Digital Center",
-      "location": "Dakar, Sénégal",
-      "period": "FEv 2024 - Nov 2025",
-      "status": "En cours",
-      "description": "Programme intensif de développement web moderne avec focus sur JavaScript, TypeScript, React, Node.js et les pratiques DevOps."
     }
   ]
 }

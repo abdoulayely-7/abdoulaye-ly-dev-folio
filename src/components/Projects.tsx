@@ -108,6 +108,14 @@ const Projects = () => {
                   ))}
                 </div>
 
+                {project.referent && (
+                  <div className="mb-4 p-3 bg-muted/50 rounded-lg border border-border">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-medium text-foreground">Référent :</span> {project.referent}
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <span className="text-sm text-muted-foreground">
                     {project.year}

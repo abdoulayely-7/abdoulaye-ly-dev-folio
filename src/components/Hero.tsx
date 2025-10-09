@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Phone, Download } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircleMore, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
 import photo from "@/assets/photo.jpeg";
@@ -101,12 +101,20 @@ const Hero = () => {
               </Button>
 
               <Button
+                asChild
                 variant="outline"
                 size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Télécharger CV
+                <a
+                  href="/CV_Abdoulaye_Ly.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Télécharger CV
+                </a>
               </Button>
             </motion.div>
 
@@ -150,10 +158,11 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href={`tel:${personal.phone[0]}`}
+                target="_blank"
+                href={`${personal.WhatsApp}`}
                 className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-card"
               >
-                <Phone className="h-5 w-5" />
+                <MessageCircleMore className="h-5 w-5" />
               </motion.a>
             </motion.div>
           </motion.div>
