@@ -12,8 +12,9 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    nom: "",
     email: "",
     message: "",
   });
@@ -32,6 +33,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       const response = await fetch('https://portfolio-mailer-u8me.onrender.com/api/contact', {
@@ -40,7 +42,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
+          nom: formData.nom,
           email: formData.email,
           message: formData.message,
         }),
@@ -51,7 +53,7 @@ const Contact = () => {
           title: "Message envoyé !",
           description: "Je vous répondrai dans les plus brefs délais.",
         });
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ nom: "", email: "", message: "" });
       } else {
         throw new Error('Erreur lors de l\'envoi');
       }
@@ -61,6 +63,8 @@ const Contact = () => {
         description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -162,9 +166,9 @@ const Contact = () => {
               <div>
                 <Input
                   placeholder="Votre nom"
-                  value={formData.name}
+                  value={formData.nom}
                   onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
+                    setFormData({ ...formData, nom: e.target.value })
                   }
                   required
                   className="bg-card border-border focus:border-primary"
@@ -200,10 +204,20 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send className="mr-2 h-5 w-5" />
-                Envoyer le message
+                {isSubmitting ? (
+                  <>
+                    <div className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-5 w-5" />
+                    Envoyer le message
+                  </>
+                )}
               </Button>
             </form>
           </motion.div>
