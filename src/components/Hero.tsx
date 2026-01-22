@@ -7,6 +7,11 @@ import photo from "@/assets/photo.jpeg";
 const Hero = () => {
   const { personal } = portfolioData;
 
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    return hour < 18 ? "Bonjour" : "Bonsoir";
+  };
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -54,7 +59,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-primary font-medium mb-4"
             >
-              Bonjour, je suis
+              {getGreeting()}, je suis
             </motion.p>
 
             <motion.h1
