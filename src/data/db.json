@@ -57,7 +57,7 @@
     {
       "id": 4,
       "title": "Gestion de cargaisons – GPduMonde",
-      "description": "Système de gestion logistique pour cargaisons multi-modales.\nInclut cartographie interactive et calcul automatique des tarifs.",
+      "description": "Système logistique pour gestion multi-modale (maritime, aérien, routier) avec cartographie interactive et calcul automatique des tarifs. Gestion des cargaisons, colis et visualisation des trajets.",
       "stack": ["TypeScript", "Leaflet", "OSRM", "Nominatim", "PostgreSQL"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/Gestion-Cargaison",
@@ -67,7 +67,7 @@
     {
       "id": 5,
       "title": "Plateforme de Gestion des Salaires Multi-Entreprises",
-      "description": "Solution SaaS pour automatisation de la paie multi-entreprises.\nArchitecture multi-tenant avec RBAC et génération de bulletins PDF.",
+      "description": "Solution SaaS pour automatisation de la paie et suivi multi-entreprises. Architecture multi-tenant avec RBAC avancé, gestion des employés et génération automatique des bulletins PDF.",
       "stack": ["React", "TypeScript", "Node.js", "Prisma", "MySQL"],
       "year": "2025",
       "github": "#",
@@ -79,7 +79,7 @@
     {
       "id": 9,
       "title": "OM-Pay — API de Paiement Mobile",
-      "description": "API de paiement mobile adaptée au marché sénégalais.\nInclut transactions sécurisées et pipeline CI/CD.",
+      "description": "API RESTful complète de paiement mobile adaptée au marché sénégalais, avec fonctionnalités avancées de transaction et sécurité renforcée. API avec authentification multi-rôles (Client, Distributeur, Admin) via Laravel Passport. Système de transaction complet : dépôts, retraits, transferts P2P, paiements marchands avec codes uniques. Génération et stockage de QR Codes sécurisés sur AWS S3 pour identification rapide des comptes. Pipeline CI/CD Jenkins avec agents distribués : build automatisé, tests, containerisation Docker et déploiement sur Render. Sécurité renforcée : Rate limiting, audit trails complet. Documentation Swagger complète pour faciliter l'intégration API.",
       "stack": ["Laravel", "MongoDB", "Jenkins", "Docker", "AWS S3"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/OM-PAY",
@@ -89,7 +89,7 @@
     {
       "id": 10,
       "title": "Fotol Jay — Marketplace Photographique Authentifiée",
-      "description": "Marketplace e-commerce garantissant l'authenticité via photos.\nSystème de modération et gestion complète des stocks.",
+      "description": "Plateforme e-commerce innovante garantissant l'authenticité des produits via photos personnelles obligatoires du vendeur. Architecture Full Stack TypeScript avec validation Zod et gestion d'état avancée. Système de modération manuelle pré-publication pour garantir la qualité et l'authenticité. Gestion complète des stocks, catégories, utilisateurs avec rôles différenciés (Admin, Modérateur, Vendeur). Intégration Cloudinary pour optimisation, hébergement et transformation d'images. Suppression automatique d'une publication après une semaine d'inactivité, avec possibilité de réactivation par le vendeur. Authentification sécurisée JWT avec access et refresh tokens. Déploiement du backend via pipeline CI/CD Jenkins avec tests automatisés et containerisation Docker. Documentation Swagger complète pour faciliter l'intégration API.",
       "stack": ["Node.js", "TypeScript", "Angular", "Prisma", "MySQL", "Docker", "Jenkins"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/fotol_jay_front",
@@ -99,7 +99,7 @@
     {
       "id": 11,
       "title": "Système Bancaire Moderne",
-      "description": "API bancaire avec gestion de comptes et archivage automatique.\nArchitecture hybride PostgreSQL et MongoDB.",
+      "description": "API RESTful robuste pour gestion complète d'un système bancaire avec architecture Clean Architecture et haute disponibilité. Multi-types de comptes (épargne, chèque, courant) avec calcul automatique du solde en temps réel. Architecture hybride : PostgreSQL (données relationnelles) + MongoDB (transactions haute performance). Système d'archivage automatique entre deux bases PostgreSQL (Render & Neon) avec restauration planifiée à expiration. Authentification et autorisation multi-rôles (clients, administrateurs) via Laravel Passport. Jobs asynchrones, cache Redis, notifications SMS/Email (Twilio), logging middleware, rate limiting. Recherche, filtrage et pagination dynamique des comptes avec blocage planifié des comptes épargne. Déployé via pipeline CI/CD Jenkins avec tests automatisés et containerisation Docker. Documentation Swagger complète et respect strict des principes SOLID.",
       "stack": ["Laravel", "PostgreSQL", "MongoDB", "Docker", "Jenkins", "Render"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/laravel-ges-bank",
@@ -110,7 +110,7 @@
     {
       "id": 1,
       "title": "Gestion de rendez-vous médicaux",
-      "description": "Application de planification de rendez-vous médicaux.\nGestion des patients, médecins et notifications automatiques.",
+      "description": "Application de planification de rendez-vous médicaux avec gestion des patients, médecins et secrétaires. Interface intuitive avec notifications automatiques et chatbot intégré.",
       "stack": ["Laravel", "Angular", "JWT", "PostgreSQL"],
       "year": "2024",
       "github": "https://github.com/NDIAYEFATAH/memoire/tree/abdoulaye",
@@ -120,18 +120,16 @@
     {
       "id": 2,
       "title": "Gestion financière",
-      "description": "Plateforme de gestion de comptes avec transferts de fonds.\nSuivi des transactions et expérience sécurisée.",
+      "description": "Plateforme de gestion de comptes épargne et courant avec transferts de fonds et suivi des transactions. Expérience utilisateur sécurisée et intuitive.",
       "stack": ["Laravel", "PostgreSQL"],
       "year": "2024",
       "github": "https://github.com/abdoulayely-7/gestionFinance",
-      "tags": ["backend", "finance"],
-      "referent": "M. Mbaye & Coach — +221 78 150 75 84"
-
+      "tags": ["backend", "finance"]
     },
     {
       "id": 3,
       "title": "Réservation de tickets TER",
-      "description": "Système de réservation pour transport ferroviaire.\nGénération de QR codes et gestion des horaires.",
+      "description": "Système de réservation en ligne pour le transport ferroviaire avec génération de QR codes et gestion des horaires.",
       "stack": ["Laravel", "PostgreSQL"],
       "year": "2023",
       "github": "https://github.com/abdoulayely-7/Projet-Ter",
@@ -142,7 +140,7 @@
       {
       "id": 8,
       "title": "Gestion des apprenants ODC",
-      "description": "Application de gestion des apprenants pour Orange Digital Center.\nSuivi des promotions, notes et automatisation administrative.",
+      "description": "Ce projet vise à digitaliser la gestion apprenants de Orange Digital Center. L’application permet d’enregistrer les apprenants, de suivre leur évolution (promotions, référentiel, notes, absences) et d’automatiser les tâches administratives liées à la formation. Elle a été conçue avec une architecture propre respectant les principes SOLID et MVC, garantissant une bonne maintenabilité et évolutivité du code.",
       "stack": ["Php", "Json server"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/pointage_odc",
