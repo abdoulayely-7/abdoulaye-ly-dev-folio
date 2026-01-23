@@ -13,9 +13,6 @@ const Hero = () => {
     return hour < 18 ? "Bonjour" : "Bonsoir";
   };
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -113,7 +110,7 @@ const Hero = () => {
               className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
               Passionné par la création d'applications web modernes et performantes.
-              Spécialisé en développement fullstack avec React, Node.js, Laravel et plus.
+              Spécialisé en développement fullstack avec Spring-Boot, React, Node.js, Laravel, Angular, Next, Nest, Vue, et plus.
             </motion.p>
 
             <motion.div
@@ -123,12 +120,18 @@ const Hero = () => {
               className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8"
             >
               <Button
-                onClick={scrollToContact}
+                asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant"
+                className="bg-green-600 hover:bg-green-700 text-white shadow-elegant"
               >
-                <Mail className="mr-2 h-5 w-5" />
-                Me contacter
+                <a
+                  href={personal.WhatsApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircleMore className="mr-2 h-5 w-5" />
+                  Me contacter sur WhatsApp
+                </a>
               </Button>
 
               <Button
@@ -141,10 +144,10 @@ const Hero = () => {
                   href="/CV_Abdoulaye_Ly.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center"
+                  className="flex items-center p-2 text-5md"
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Télécharger CV
+                  Voir mon  CV
                 </a>
               </Button>
             </motion.div>

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Github, Linkedin, Mail, Download, Heart, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Heart, Code, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
 
@@ -117,6 +117,16 @@ const Footer = () => {
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Mail className="h-5 w-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                href={personal.WhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-green-600 hover:text-white transition-all"
+              >
+                <MessageCircle className="h-5 w-5" />
               </motion.a>
             </div>
             <p className="text-sm text-muted-foreground">

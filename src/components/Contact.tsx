@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Phone, Copy, Check, Send } from "lucide-react";
+import { Mail, Phone, Copy, Check, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,7 +36,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://portfolio-mailer-u8me.onrender.com/api/contact', {
+      const response = await fetch('https://portfolio-mailer-0zvf.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,33 +90,59 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-2 space-y-6"
+            className="grid md:grid-cols-3 gap-6"
           >
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-green-500/20">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
+                  <MessageCircle className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold mb-1">Email</h3>
-                  <a
-                    href={`mailto:${personal.email}`}
-                    className="text-sm text-primary hover:underline break-all"
-                  >
-                    {personal.email}
-                  </a>
+                  <h3 className="font-semibold mb-1">WhatsApp</h3>
+                  <p className="text-sm text-muted-foreground">Réponse instantanée 24/7</p>
                 </div>
               </div>
               <Button
+                asChild
+                className="w-full bg-green-600 hover:bg-green-700 text-white shadow-elegant"
+              >
+                <a
+                  href={personal.WhatsApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Ouvrir WhatsApp
+                </a>
+              </Button>
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-purple-500/20">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-purple-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-sm text-muted-foreground">Réponse garantie sous 24h</p>
+                </div>
+              </div>
+              <a
+                href={`mailto:${personal.email}`}
+                className="block text-sm text-purple-600 hover:underline break-all font-medium mb-4"
+              >
+                {personal.email}
+              </a>
+              <Button
                 onClick={handleCopyEmail}
                 variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
               >
                 {copied ? (
                   <>
@@ -132,94 +158,38 @@ const Contact = () => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-primary" />
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-blue-500/20">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-blue-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Téléphone</h3>
-                  <div className="space-y-1">
-                    {personal.phone.map((phone) => (
-                      <a
-                        key={phone}
-                        href={`tel:${phone}`}
-                        className="block text-sm text-primary hover:underline"
-                      >
-                        {phone}
-                      </a>
-                    ))}
-                  </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold mb-1">Téléphone</h3>
+                  <p className="text-sm text-muted-foreground">Appel direct disponible</p>
                 </div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="lg:col-span-3"
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  placeholder="Votre nom"
-                  value={formData.nom}
-                  onChange={(e) =>
-                    setFormData({ ...formData, nom: e.target.value })
-                  }
-                  required
-                  className="bg-card border-border focus:border-primary"
-                />
+              <div className="space-y-2 mb-4">
+                {personal.phone.map((phone) => (
+                  <a
+                    key={phone}
+                    href={`tel:${phone}`}
+                    className="block text-sm text-blue-600 hover:underline font-medium"
+                  >
+                    {phone}
+                  </a>
+                ))}
               </div>
-
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Votre email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                  className="bg-card border-border focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <Textarea
-                  placeholder="Votre message"
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  required
-                  rows={6}
-                  className="bg-card border-border focus:border-primary resize-none"
-                />
-              </div>
-
               <Button
-                type="submit"
-                size="lg"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant disabled:opacity-50 disabled:cursor-not-allowed"
+                asChild
+                variant="outline"
+                className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
-                    Envoi en cours...
-                  </>
-                ) : (
-                  <>
-                    <Send className="mr-2 h-5 w-5" />
-                    Envoyer le message
-                  </>
-                )}
+                <a href={`tel:${personal.phone[0]}`}>
+                  <Phone className="mr-2 h-4 w-4" />
+                  Appeler maintenant
+                </a>
               </Button>
-            </form>
+            </div>
           </motion.div>
         </div>
       </div>
