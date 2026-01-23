@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MessageCircleMore, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
@@ -62,23 +63,48 @@ const Hero = () => {
               {getGreeting()}, je suis
             </motion.p>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="text-5xl lg:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent"
             >
-              {personal.name}
-            </motion.h1>
+              <TypeAnimation
+                sequence={[
+                  personal.name,
+                  2000,
+                  '',
+                  500,
+                  personal.name,
+                ]}
+                wrapper="h1"
+                speed={50}
+                repeat={Infinity}
+                cursor={true}
+              />
+            </motion.div>
 
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className="text-2xl lg:text-3xl text-muted-foreground mb-8"
             >
-              {personal.role}
-            </motion.h2>
+              <TypeAnimation
+                sequence={[
+                  personal.role,
+                  2000,
+                  'Passionné par le développement web',
+                  2000,
+                  'Expert en technologies modernes',
+                  2000,
+                ]}
+                wrapper="h2"
+                speed={50}
+                repeat={Infinity}
+                cursor={true}
+              />
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }}

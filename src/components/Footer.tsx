@@ -1,17 +1,30 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Github, Linkedin, Mail, Download, Heart, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
 
 const Footer = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { personal } = portfolioData;
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border py-12 px-4">
+    <footer ref={ref} className="bg-card border-t border-border py-12 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="grid md:grid-cols-3 gap-8 mb-8"
+        >
           {/* Branding */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
               {personal.name}
             </h3>
@@ -32,16 +45,23 @@ const Footer = () => {
                   Télécharger CV
                 </a>
               </Button>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <h4 className="font-semibold mb-4">Navigation</h4>
             <nav className="space-y-2">
               {["Accueil", "À propos", "Compétences", "Projets", "Contact"].map(
-                (item) => (
-                  <button
+                (item, index) => (
+                  <motion.button
                     key={item}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
                     onClick={() => {
                       const id = item
                         .toLowerCase()
@@ -56,51 +76,66 @@ const Footer = () => {
                     className="block text-muted-foreground hover:text-primary transition-colors"
                   >
                     {item}
-                  </button>
+                  </motion.button>
                 )
               )}
             </nav>
-          </div>
+          </motion.div>
 
           {/* Social */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <h4 className="font-semibold mb-4">Me suivre</h4>
             <div className="flex gap-3 mb-4">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 href={personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Github className="h-5 w-5" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 href={`mailto:${personal.email}`}
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Mail className="h-5 w-5" />
-              </a>
+              </motion.a>
             </div>
             <p className="text-sm text-muted-foreground">
               Langues : {personal.languages.join(", ")}
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="pt-8 border-t border-border text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="pt-8 border-t border-border text-center"
+        >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
             © {currentYear} {personal.name}. Créé par{" "}
             <Code className="h-4 w-4 text-primary fill-primary" />  LyDevTech<Code className="h-4 w-4 text-primary fill-primary" />
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
