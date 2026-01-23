@@ -178,6 +178,92 @@
       ]
     }
   ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Développement Web Fullstack",
+      "description": "Création d'applications web modernes et performantes avec les dernières technologies. Du frontend réactif au backend robuste.",
+      "icon": "Code",
+      "technologies": ["React", "Next.js", "Node.js", "Laravel", "Spring Boot"],
+      "features": [
+        "Applications web responsive",
+        "APIs RESTful et GraphQL",
+        "Intégration de bases de données",
+        "Authentification et sécurité",
+        "Déploiement et maintenance"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Développement Mobile",
+      "description": "Applications mobiles natives et cross-platform pour iOS et Android avec une expérience utilisateur exceptionnelle.",
+      "icon": "Smartphone",
+      "technologies": ["React Native", "Flutter", "Dart"],
+      "features": [
+        "Apps iOS et Android",
+        "Interface utilisateur intuitive",
+        "Intégration d'APIs",
+        "Notifications push",
+        "Publication sur les stores"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Architecture & Consulting",
+      "description": "Conseil technique et architecturale pour vos projets. Analyse des besoins et recommandations stratégiques.",
+      "icon": "Lightbulb",
+      "technologies": ["AWS", "Docker", "Kubernetes", "CI/CD"],
+      "features": [
+        "Audit technique",
+        "Architecture logicielle",
+        "Recommandations technologiques",
+        "Migration et optimisation",
+        "Formation et mentoring"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Intégration & API",
+      "description": "Développement et intégration d'APIs robustes pour connecter vos systèmes et services externes.",
+      "icon": "Zap",
+      "technologies": ["Node.js", "Express", "Laravel", "Swagger"],
+      "features": [
+        "APIs REST et GraphQL",
+        "Documentation automatique",
+        "Tests et validation",
+        "Sécurité et authentification",
+        "Monitoring et logging"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "DevOps & Déploiement",
+      "description": "Automatisation des processus de développement, déploiement et maintenance de vos applications.",
+      "icon": "Settings",
+      "technologies": ["Docker", "Jenkins", "Kubernetes", "AWS"],
+      "features": [
+        "Pipelines CI/CD",
+        "Conteneurisation",
+        "Orchestration",
+        "Monitoring et alerting",
+        "Sécurité infrastructure"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Maintenance & Support",
+      "description": "Support technique continu et maintenance évolutive de vos applications existantes.",
+      "icon": "Shield",
+      "technologies": ["Git", "Monitoring", "Testing"],
+      "features": [
+        "Corrections de bugs",
+        "Mises à jour de sécurité",
+        "Optimisations performance",
+        "Évolutions fonctionnelles",
+        "Support technique"
+      ]
+    }
+  ],
   "education": [
     {
       "degree": "Master en Architecture Logicielle, Cloud & Devops",
@@ -195,6 +281,6 @@
       "status": "Diplôme obtenu en 2024",
       "description": "Formation complète en informatique couvrant les fondamentaux de la programmation, les bases de données, le génie logiciel et le développement web. Compétences acquises :\n– Analyser et concevoir des applications informatiques ;\n– Implémenter des applications informatiques ;\n– Tester, déployer et maintenir des applications informatiques ;\n– Produire de la documentation technique et fonctionnelle ;\n– Faire le versionning des applications informatiques ;\n– Gérer un projet informatique ;\n– Travailler en équipe."
     }
-    
+
   ]
 }
