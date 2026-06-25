@@ -37,8 +37,12 @@ import {
   SiMongodb,
   SiSupabase,
   SiSwagger,
+  SiGithubactions,
+  SiTerraform,
+  SiAnsible,
 } from "react-icons/si";
 import { FaJava, FaHashtag } from "react-icons/fa";
+import { TbBrandAzure } from "react-icons/tb";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -65,9 +69,9 @@ const Skills = () => {
       Hono: <SiHono className="w-8 h-8" />,
       "React Native": <SiReact className="w-8 h-8" />,
       Vue: <SiVuedotjs className="w-8 h-8" />,
-      Next: <SiNextdotjs className="w-8 h-8" />,
-      Nest: <SiNestjs className="w-8 h-8" />,
-      "Spring-Boot": <SiSpringboot className="w-8 h-8" />,
+      "Next.js": <SiNextdotjs className="w-8 h-8" />,
+      NestJS: <SiNestjs className="w-8 h-8" />,
+      "Spring Boot": <SiSpringboot className="w-8 h-8" />,
       Symfony: <SiSymfony className="w-8 h-8" />,
       Django: <SiDjango className="w-8 h-8" />,
       Flask: <SiFlask className="w-8 h-8" />,
@@ -77,12 +81,16 @@ const Skills = () => {
       Jenkins: <SiJenkins className="w-8 h-8" />,
       Kubernetes: <SiKubernetes className="w-8 h-8" />,
       Git: <SiGit className="w-8 h-8" />,
-      Github: <SiGithub className="w-8 h-8" />,
+      GitHub: <SiGithub className="w-8 h-8" />,
+      "GitHub Actions": <SiGithubactions className="w-8 h-8" />,
+      Terraform: <SiTerraform className="w-8 h-8" />,
+      Ansible: <SiAnsible className="w-8 h-8" />,
       AWS: <SiAmazonwebservices className="w-8 h-8" />,
+      "Microsoft Azure": <TbBrandAzure className="w-8 h-8" />,
       Render: <SiRender className="w-8 h-8" />,
       Vercel: <SiVercel className="w-8 h-8" />,
-      Sonarqube: <SiSonarqube className="w-8 h-8" />,
-      "Mongo DB": <SiMongodb className="w-8 h-8" />,
+      SonarQube: <SiSonarqube className="w-8 h-8" />,
+      MongoDB: <SiMongodb className="w-8 h-8" />,
       Supabase: <SiSupabase className="w-8 h-8" />,
       Swagger: <SiSwagger className="w-8 h-8" />,
     };
@@ -93,9 +101,10 @@ const Skills = () => {
     { id: "all", label: "Toutes" },
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
-    { id: "database", label: "Base de données" },
-    { id: "tools", label: "Outils" },
     { id: "mobile", label: "Mobile" },
+    { id: "database", label: "Bases de données" },
+    { id: "devops", label: "DevOps & Cloud" },
+    { id: "tools", label: "Outils" },
   ];
 
   const filteredSkills =

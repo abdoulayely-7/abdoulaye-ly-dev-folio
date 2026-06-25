@@ -10,9 +10,14 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [filter, setFilter] = useState<string>("all");
 
-  const allTags = Array.from(
-    new Set(portfolioData.projects.flatMap((p) => p.tags))
-  );
+  const projectFilters = [
+    { value: "all", label: "Tous" },
+    { value: "fullstack", label: "Fullstack" },
+    { value: "frontend", label: "Frontend" },
+    { value: "backend", label: "Backend" },
+    { value: "mobile", label: "Mobile" },
+    { value: "devops", label: "DevOps" },
+  ];
 
   const filteredProjects =
     filter === "all"
@@ -44,37 +49,25 @@ const Projects = () => {
 
           <div className="flex flex-wrap gap-2 justify-center items-center">
             <Filter className="h-4 w-4 text-muted-foreground" />
-            <Button
-              onClick={() => setFilter("all")}
-              variant={filter === "all" ? "default" : "outline"}
-              size="sm"
-              className={
-                filter === "all"
-                  ? "bg-primary text-primary-foreground"
-                  : "border-border hover:border-primary"
-              }
-            >
-              Tous
-            </Button>
-            {allTags.map((tag) => (
+            {projectFilters.map((item) => (
               <Button
-                key={tag}
-                onClick={() => setFilter(tag)}
-                variant={filter === tag ? "default" : "outline"}
+                key={item.value}
+                onClick={() => setFilter(item.value)}
+                variant={filter === item.value ? "default" : "outline"}
                 size="sm"
                 className={
-                  filter === tag
+                  filter === item.value
                     ? "bg-primary text-primary-foreground"
                     : "border-border hover:border-primary"
                 }
               >
-                {tag}
+                {item.label}
               </Button>
             ))}
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -82,15 +75,15 @@ const Projects = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group"
+              className="group break-inside-avoid"
             >
-              <div className="h-full bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300">
+              <div className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 whitespace-pre-line">
                       {project.description}
                     </p>
                   </div>
@@ -124,7 +117,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                    className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors text-right"
                   >
                     <Github className="h-4 w-4" />
                     Voir sur GitHub

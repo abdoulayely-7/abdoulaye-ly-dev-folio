@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MessageCircleMore, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
-import photo from "@/assets/photo.jpeg";
+import photo from "@/assets/moi1.jpeg";
 
 const Hero = () => {
   const { personal } = portfolioData;

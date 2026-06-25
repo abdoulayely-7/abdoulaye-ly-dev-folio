@@ -4,7 +4,7 @@
     "role": "Développeur Fullstack ",
     "email": "lydevtech@gmail.com",
     "phone": ["+221 77 379 53 83", "+221 77 954 45 08"],
-    "WhatsApp":"https://api.whatsapp.com/send/?phone=+221773795383&text=Salut+Abdoulaye",
+    "WhatsApp": "https://api.whatsapp.com/send/?phone=+221773795383&text=Salut+Abdoulaye",
     "github": "https://github.com/abdoulayely-7",
     "linkedin": "https://www.linkedin.com/in/abdoulaye-ly-b53884229/",
     "languages": ["Français", "Anglais"],
@@ -12,48 +12,68 @@
     "about": "Développeur fullstack passionné avec une expertise en développement web moderne. J'aime créer des applications robustes et élégantes qui résolvent des problèmes concrets. Fort d'une formation solide à l'ISI Dakar et d'une expérience pratique variée, je maîtrise l'ensemble de la stack de développement, du frontend au backend."
   },
   "skills": [
-    { "name": "Java", "level": 90, "category": "backend" },
-    { "name": "Spring-Boot", "level": 80, "category": "backend" },
-    { "name": "JavaScript", "level": 90, "category": "frontend" },
-    { "name": "TypeScript", "level": 80, "category": "frontend" },
+    { "name": "Spring Boot", "level": 80, "category": "backend" },
     { "name": "React", "level": 80, "category": "frontend" },
     { "name": "Angular", "level": 85, "category": "frontend" },
     { "name": "Vue", "level": 80, "category": "frontend" },
-    { "name": "Next", "level": 85, "category": "frontend" },
+    { "name": "Next.js", "level": 85, "category": "frontend" },
     { "name": "Node.js", "level": 90, "category": "backend" },
     { "name": "Express", "level": 95, "category": "backend" },
-    { "name": "Nest", "level": 85, "category": "backend" },
+    { "name": "NestJS", "level": 85, "category": "backend" },
     { "name": "Hono", "level": 80, "category": "backend" },
-    { "name": "PHP", "level": 95, "category": "backend" },
     { "name": "Laravel", "level": 95, "category": "backend" },
-    { "name": "Symfony", "level": 80, "category": "backend" },
     { "name": "Python", "level": 80, "category": "backend" },
     { "name": "Django", "level": 80, "category": "backend" },
     { "name": "Flask", "level": 80, "category": "backend" },
     { "name": "Flutter", "level": 75, "category": "mobile" },
     { "name": "React Native", "level": 80, "category": "mobile" },
     { "name": "Dart", "level": 80, "category": "mobile" },
-    { "name": "C#", "level": 80, "category": "backend" },
-    { "name": "ASP.NET", "level": 80, "category": "backend" },
     { "name": "Swagger", "level": 80, "category": "tools" },
     { "name": "PostgreSQL", "level": 75, "category": "database" },
     { "name": "MySQL", "level": 85, "category": "database" },
-    { "name": "Mongo DB", "level": 80, "category": "database" },
+    { "name": "MongoDB", "level": 80, "category": "database" },
     { "name": "Supabase", "level": 80, "category": "database" },
-    { "name": "Prisma", "level": 85, "category": "tools" },
-    { "name": "Docker", "level": 75, "category": "tools" },
-    { "name": "Jenkins", "level": 80, "category": "tools" },
-    { "name": "Kubernetes", "level": 80, "category": "tools" },
-    { "name": "Git", "level": 80, "category": "tools" },
-    { "name": "Github", "level": 80, "category": "tools" },
-    { "name": "AWS", "level": 80, "category": "tools" },
-    { "name": "Render", "level": 80, "category": "tools" },
-    { "name": "Vercel", "level": 80, "category": "tools" },
-    { "name": "Sonarqube", "level": 80, "category": "tools" }  
+    { "name": "Docker", "level": 75, "category": "devops" },
+    { "name": "Jenkins", "level": 80, "category": "devops" },
+    { "name": "Kubernetes", "level": 80, "category": "devops" },
+    { "name": "GitHub Actions", "level": 80, "category": "devops" },
+    { "name": "Terraform", "level": 80, "category": "devops" },
+    { "name": "Ansible", "level": 80, "category": "devops" },
+    { "name": "AWS", "level": 80, "category": "devops" },
+    { "name": "Microsoft Azure", "level": 80, "category": "devops" },
+    { "name": "SonarQube", "level": 80, "category": "devops" }
   ],
-  
+
   "projects": [
-    
+    {
+      "id": 12,
+      "title": "MediBook — Plateforme SaaS de Gestion de Rendez-vous Médicaux",
+      "description": "Plateforme SaaS multi-cabinets permettant la gestion automatisée des rendez-vous médicaux avec administration des disponibilités par les secrétaires médicaux.\nArchitecture multi-tenant, rôles avancés, génération automatique des créneaux, exceptions de planning, branding par cabinet, médias Cloudinary, notifications Brevo/FCM, migrations Flyway, CI/CD Jenkins, qualité SonarCloud/Trivy, infrastructure Azure avec Terraform et monitoring Prometheus/Grafana.",
+      "stack": [
+        "Spring Boot",
+        "PostgreSQL",
+        "Docker",
+        "React",
+        "Flutter",
+        "GetX",
+        "Swagger",
+        "Cloudinary",
+        "Brevo",
+        "Firebase Cloud Messaging",
+        "Flyway",
+        "Jenkins",
+        "SonarCloud",
+        "Trivy",
+        "Terraform",
+        "Microsoft Azure",
+        "Prometheus",
+        "Grafana"
+      ],
+      "year": "2026",
+      "github": "git@github.com:abdoulayely-7/backend_java_odc.git",
+      "tags": ["fullstack", "mobile", "devops"],
+      "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
+    },
     {
       "id": 4,
       "title": "Gestion de cargaisons – GPduMonde",
@@ -61,7 +81,7 @@
       "stack": ["TypeScript", "Leaflet", "OSRM", "Nominatim", "PostgreSQL"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/Gestion-Cargaison",
-      "tags": ["frontend", "javascript", "typescript", "logistics"],
+      "tags": ["frontend"],
       "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
     },
     {
@@ -70,64 +90,57 @@
       "description": "Solution SaaS pour automatisation de la paie multi-entreprises.\nArchitecture multi-tenant avec RBAC et génération de bulletins PDF.",
       "stack": ["React", "TypeScript", "Node.js", "Prisma", "MySQL"],
       "year": "2025",
-      "github": "#",
-      "tags": ["fullstack", "typescript", "react"],
+      "github": "https://github.com/abdoulayely-7/ges_salaire_front",
+      "tags": ["fullstack"],
       "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
     },
-    
-  
+
     {
       "id": 9,
       "title": "OM-Pay — API de Paiement Mobile",
-      "description": "API de paiement mobile adaptée au marché sénégalais.\nInclut transactions sécurisées et pipeline CI/CD.",
-      "stack": ["Laravel", "MongoDB", "Jenkins", "Docker", "AWS S3"],
+      "description": "Solution de paiement mobile inspirée des services de Mobile Money, composée d'une API REST sécurisée et d'une application mobile Flutter.\nDéveloppement d'une API REST avec authentification multi-rôles via Laravel Passport, transactions de dépôts, retraits, transferts P2P et paiements marchands, application mobile Flutter complète, consultation du solde, historique des transactions, QR Codes sécurisés sur AWS S3, pipeline CI/CD Jenkins, Docker, déploiement Render, documentation Swagger/OpenAPI, Rate Limiting et Audit Trails.",
+      "stack": ["Laravel", "Flutter", "MongoDB", "Jenkins", "Docker", "AWS S3"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/OM-PAY",
-      "tags": ["backend", "payment"],
+      "tags": ["fullstack", "mobile", "devops"],
       "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
     },
     {
       "id": 10,
       "title": "Fotol Jay — Marketplace Photographique Authentifiée",
       "description": "Marketplace e-commerce garantissant l'authenticité via photos.\nSystème de modération et gestion complète des stocks.",
-      "stack": ["Node.js", "TypeScript", "Angular", "Prisma", "MySQL", "Docker", "Jenkins"],
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "Angular",
+        "Prisma",
+        "MySQL",
+        "Docker",
+        "Jenkins"
+      ],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/fotol_jay_front",
-      "tags": ["fullstack", "ecommerce"],
+      "tags": ["fullstack"],
       "referent": "M. Aly Tall Niang & Coach, Orange Digital Center — +221 77 182 54 14"
     },
     {
       "id": 11,
-      "title": "Système Bancaire Moderne",
+      "title": "Gestion Bancaire ",
       "description": "API bancaire avec gestion de comptes et archivage automatique.\nArchitecture hybride PostgreSQL et MongoDB.",
-      "stack": ["Laravel", "PostgreSQL", "MongoDB", "Docker", "Jenkins", "Render"],
+      "stack": [
+        "Laravel",
+        "PostgreSQL",
+        "MongoDB",
+        "Docker",
+        "Jenkins",
+        "Render"
+      ],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/laravel-ges-bank",
-      "tags": ["backend", "banking"],
+      "tags": ["backend"],
       "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
+    },
 
-    },
-    {
-      "id": 1,
-      "title": "Gestion de rendez-vous médicaux",
-      "description": "Application de planification de rendez-vous médicaux.\nGestion des patients, médecins et notifications automatiques.",
-      "stack": ["Laravel", "Angular", "JWT", "PostgreSQL"],
-      "year": "2024",
-      "github": "https://github.com/NDIAYEFATAH/memoire/tree/abdoulaye",
-      "tags": ["backend", "frontend", "healthcare"],
-      "referent": "M. Matar Thioye Encadrant mémoire, ISI — +221 77 568 40 64"
-    },
-    {
-      "id": 2,
-      "title": "Gestion financière",
-      "description": "Plateforme de gestion de comptes avec transferts de fonds.\nSuivi des transactions et expérience sécurisée.",
-      "stack": ["Laravel", "PostgreSQL"],
-      "year": "2024",
-      "github": "https://github.com/abdoulayely-7/gestionFinance",
-      "tags": ["backend", "finance"],
-      "referent": "M. Mbaye & Coach — +221 78 150 75 84"
-
-    },
     {
       "id": 3,
       "title": "Réservation de tickets TER",
@@ -137,21 +150,32 @@
       "github": "https://github.com/abdoulayely-7/Projet-Ter",
       "tags": ["backend"],
       "referent": "M. Mbaye & Coach — +221 78 150 75 84"
-
     },
-      {
+    {
       "id": 8,
       "title": "Gestion des apprenants ODC",
       "description": "Application de gestion des apprenants pour Orange Digital Center.\nSuivi des promotions, notes et automatisation administrative.",
       "stack": ["Php", "Json server"],
       "year": "2025",
       "github": "https://github.com/abdoulayely-7/pointage_odc",
-      "tags": ["backend", "education"],
+      "tags": ["backend"],
       "referent": "M. Birane Baila Wane & Coach, Orange Digital Center — +221 77 766 95 95"
     }
   ],
 
   "experience": [
+    {
+      "title": "Développeur Frontend Mini Apps (Stage)",
+      "company": "Sonatel | Tencent Cloud",
+      "duration": "En cours",
+      "period": "2026 - Présent",
+      "description": "Développement de mini applications intégrées à la plateforme Max it avec TypeScript, JavaScript et l'écosystème Tencent Cloud Mini Program, avec intégration de services métiers via des API REST.",
+      "highlights": [
+        "Développement et maintenance de mini applications destinées à la plateforme Max it",
+        "Conception d'interfaces utilisateurs responsives en respectant les standards de l'écosystème Tencent Cloud Mini Program",
+        "Intégration et consommation d'API REST pour l'accès aux services métiers"
+      ]
+    },
     {
       "title": "Développeur fullstack",
       "company": "Orange Digital Center",
@@ -159,22 +183,21 @@
       "period": "Fev 2025 - Dec 2025",
       "description": "Développement  web et mobile  focus sur les technologies actuelles et les bonnes pratiques de l'industrie.",
       "highlights": [
-        "Stack  moderne (React, Node.js, Express, Angular, Laravel, Spring)",
+        "Stack  moderne (React, Node.js, Express, Angular,Flutter, Laravel, Spring,Docker, Jenkins, Github Actions)",
         "Architecture et conception logicielle",
-        "Projets pratiques"
+        "Devops déploiement automatisation"
       ]
     },
     {
-      "title": "Stage de développement",
-      "company": "INSERSITE",
+      "title": "Stage développement fullstack Laravel-Angular",
+      "company": "INSERSITE (France)",
       "type": "Stage en ligne",
-      "duration": "3 mois",
+      "duration": "6 mois",
       "period": "2024",
       "description": "Stage de développement web fullstack avec participation à des projets réels et apprentissage des méthodologies agiles.",
       "highlights": [
         "Développement de fonctionnalités frontend et backend",
-        "Collaboration en équipe distante",
-        "Utilisation de technologies modernes"
+        "Collaboration en équipe distante"
       ]
     }
   ],
@@ -281,6 +304,5 @@
       "status": "Diplôme obtenu en 2024",
       "description": "Formation complète en informatique couvrant les fondamentaux de la programmation, les bases de données, le génie logiciel et le développement web. Compétences acquises :\n– Analyser et concevoir des applications informatiques ;\n– Implémenter des applications informatiques ;\n– Tester, déployer et maintenir des applications informatiques ;\n– Produire de la documentation technique et fonctionnelle ;\n– Faire le versionning des applications informatiques ;\n– Gérer un projet informatique ;\n– Travailler en équipe."
     }
-
   ]
 }

@@ -123,10 +123,10 @@ const Contact = () => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-purple-500/20">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-emerald-500/20">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-purple-600" />
+                <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold mb-1">Email</h3>
@@ -135,14 +135,14 @@ const Contact = () => {
               </div>
               <a
                 href={`mailto:${personal.email}`}
-                className="block text-sm text-purple-600 hover:underline break-all font-medium mb-4"
+                className="block text-sm text-emerald-600 hover:underline break-all font-medium mb-4"
               >
                 {personal.email}
               </a>
               <Button
                 onClick={handleCopyEmail}
                 variant="outline"
-                className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
+                className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white"
               >
                 {copied ? (
                   <>
