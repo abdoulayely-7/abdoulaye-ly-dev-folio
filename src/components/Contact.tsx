@@ -98,10 +98,10 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="grid md:grid-cols-3 gap-6"
           >
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-green-500/20">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-primary/20">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
-                  <MessageCircle className="h-6 w-6 text-green-600" />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <MessageCircle className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold mb-1">WhatsApp</h3>
@@ -110,7 +110,7 @@ const Contact = () => {
               </div>
               <Button
                 asChild
-                className="w-full bg-green-600 hover:bg-green-700 text-white shadow-elegant"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant"
               >
                 <a
                   href={personal.WhatsApp}
@@ -123,10 +123,10 @@ const Contact = () => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-emerald-500/20">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-primary/20">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-emerald-600" />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold mb-1">Email</h3>
@@ -135,14 +135,14 @@ const Contact = () => {
               </div>
               <a
                 href={`mailto:${personal.email}`}
-                className="block text-sm text-emerald-600 hover:underline break-all font-medium mb-4"
+                className="block text-sm text-primary hover:underline break-all font-medium mb-4"
               >
                 {personal.email}
               </a>
               <Button
                 onClick={handleCopyEmail}
                 variant="outline"
-                className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
                 {copied ? (
                   <>
@@ -158,10 +158,10 @@ const Contact = () => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-blue-500/20">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-card ring-2 ring-primary/20">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold mb-1">Téléphone</h3>
@@ -173,7 +173,7 @@ const Contact = () => {
                   <a
                     key={phone}
                     href={`tel:${phone}`}
-                    className="block text-sm text-blue-600 hover:underline font-medium"
+                    className="block text-sm text-primary hover:underline font-medium"
                   >
                     {phone}
                   </a>
@@ -182,7 +182,7 @@ const Contact = () => {
               <Button
                 asChild
                 variant="outline"
-                className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
                 <a href={`tel:${personal.phone[0]}`}>
                   <Phone className="mr-2 h-4 w-4" />

@@ -124,7 +124,7 @@ const Footer = () => {
                 href={personal.WhatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-green-600 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <MessageCircle className="h-5 w-5" />
               </motion.a>

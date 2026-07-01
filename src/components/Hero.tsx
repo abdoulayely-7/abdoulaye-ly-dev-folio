@@ -3,10 +3,21 @@ import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MessageCircleMore, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
-import photo from "@/assets/moi1.jpeg";
+import photo from "@/assets/moi3.jpeg";
 
 const Hero = () => {
   const { personal } = portfolioData;
+  const constellationTechs = [
+    "Communication",
+    "Empathie",
+    "Teamwork",
+    "Problem Solving",
+    "Adaptability",
+    "Creativity",
+    "Organization",
+    "Collaboration",
+    "Innovation",
+  ];
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -28,18 +39,61 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            <div className="relative">
+            <div className="relative w-[24rem] h-[24rem] lg:w-[36rem] lg:h-[36rem] flex items-center justify-center [perspective:900px]">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30"
               />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-3 rounded-full border border-primary/20"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 52, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-10 rounded-full border border-primary/10"
+              />
+              {constellationTechs.map((tech, index) => {
+                const angle = (index / constellationTechs.length) * Math.PI * 2;
+                const x = Math.cos(angle) * 46;
+                const y = Math.sin(angle) * 46;
+
+                return (
+                  <div
+                    key={tech}
+                    className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
+                    style={{
+                      left: `${50 + x}%`,
+                      top: `${50 + y}%`,
+                    }}
+                  >
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.7 }}
+                      animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+                      transition={{
+                        opacity: { delay: 0.7 + index * 0.08 },
+                        scale: { delay: 0.7 + index * 0.08 },
+                        y: {
+                          duration: 2.8 + index * 0.12,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                      }}
+                      className="block rounded-full border border-primary/25 bg-background/80 px-3 py-1 text-xs font-medium text-primary shadow-card backdrop-blur-md"
+                    >
+                      {tech}
+                    </motion.span>
+                  </div>
+                );
+              })}
               <motion.img
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04, rotateY: -5, rotateX: 3 }}
                 transition={{ duration: 0.3 }}
                 src={photo}
                 alt={`Photo de ${personal.name}`}
-                className="relative w-72 h-72 lg:w-96 lg:h-96 object-cover object-top rounded-2xl shadow-elegant"
+                className="relative z-10 h-96 w-72 lg:h-[32rem] lg:w-[25rem] object-cover object-center rounded-3xl shadow-2xl ring-4 ring-primary/30 border-2 border-primary/50 backdrop-blur-sm"
               />
             </div>
           </motion.div>
@@ -49,7 +103,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center lg:text-left order-2 lg:order-1"
+            className="text-center lg:text-left order-2 lg:order-1 "
           >
             <motion.p
               initial={{ opacity: 0 }}
@@ -64,7 +118,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-5xl lg:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent"
+              className="text-5xl lg:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent pb-4"
             >
               <TypeAnimation
                 sequence={[
@@ -122,12 +176,14 @@ const Hero = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white shadow-elegant"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant"
               >
                 <a
                   href={personal.WhatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center px-4 py-3 text-white font-semibold"
+                  aria-label="Contacter via WhatsApp"
                 >
                   <MessageCircleMore className="mr-2 h-5 w-5" />
                   Me contacter sur WhatsApp

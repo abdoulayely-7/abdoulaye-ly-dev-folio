@@ -25,9 +25,13 @@ const Experience = () => {
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="relative">
+        <div className="relative [perspective:1000px]">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-primary" />
+          <motion.div
+            animate={{ opacity: [0.55, 1, 0.55] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-primary shadow-elegant"
+          />
 
           <div className="space-y-12">
             {portfolioData.experience.map((exp, index) => (
@@ -41,7 +45,7 @@ const Experience = () => {
                 {/* Timeline dot */}
                 <motion.div
                   initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : {}}
+                  animate={isInView ? { scale: 1, z: [0, 16, 0] } : {}}
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.2 }}
                   className="absolute left-6 top-6 w-5 h-5 rounded-full bg-primary border-4 border-background shadow-elegant"
                 />
@@ -51,7 +55,11 @@ const Experience = () => {
                   <Briefcase className="h-4 w-4 text-primary" />
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all">
+                <motion.div
+                  whileHover={{ rotateY: -2, x: 6, z: 18 }}
+                  transition={{ duration: 0.25 }}
+                  className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant hover:border-primary/40 transition-all [transform-style:preserve-3d]"
+                >
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
@@ -81,7 +89,7 @@ const Experience = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>

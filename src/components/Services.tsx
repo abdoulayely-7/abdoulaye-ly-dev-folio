@@ -111,7 +111,7 @@ const Services = () => {
             href={portfolioData.personal.WhatsApp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors shadow-lg"
+            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-medium transition-colors shadow-elegant"
           >
             <Zap className="mr-2 h-5 w-5" />
             Démarrons un projet

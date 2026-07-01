@@ -9,7 +9,7 @@
     "linkedin": "https://www.linkedin.com/in/abdoulaye-ly-b53884229/",
     "languages": ["Français", "Anglais"],
     "photo": "/src/assets/photo.jpeg",
-    "about": "Développeur fullstack passionné avec une expertise en développement web moderne. J'aime créer des applications robustes et élégantes qui résolvent des problèmes concrets. Fort d'une formation solide à l'ISI Dakar et d'une expérience pratique variée, je maîtrise l'ensemble de la stack de développement, du frontend au backend."
+    "about": "Développeur Full Stack orienté architecture logicielle, DevOps et Cloud, je conçois des applications web et mobiles performantes, évolutives et maintenables. J'interviens sur l'ensemble du cycle de développement, de la conception de l'architecture jusqu'au déploiement automatisé des applications."
   },
   "skills": [
     { "name": "Spring Boot", "level": 80, "category": "backend" },

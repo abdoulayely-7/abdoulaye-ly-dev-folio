@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-4" ref={ref}>
+    <section id="about" className=" px-4" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -60,14 +60,10 @@ const About = () => {
               {personal.about}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Mon parcours m'a permis de travailler sur une variété de projets,
-              allant de la gestion médicale aux systèmes financiers, en passant
-              par des plateformes e-commerce et des applications de gestion RH.
+              Au fil de mes projets, j'ai développé des plateformes SaaS, des API sécurisées, des applications mobiles Flutter et des mini apps, en mettant l'accent sur la qualité du code, l'expérience utilisateur et les bonnes pratiques de développement.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Je suis constamment à la recherche de nouveaux défis et
-              j'apprécie particulièrement collaborer avec des équipes
-              dynamiques pour créer des solutions innovantes.
+              Curieux et passionné par les nouvelles technologies, j'apprécie relever des défis techniques, apprendre en continu et collaborer au sein d'équipes agiles pour concevoir des solutions à forte valeur ajoutée.
             </p>
           </motion.div>
 
@@ -83,8 +79,8 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all"
+                whileHover={{ y: -4 }}
+                className="bg-card/80 border border-border rounded-xl p-5 shadow-card hover:border-primary/40 hover:shadow-elegant transition-all"
               >
                 <item.icon className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-semibold text-lg mb-2">{item.title}</h3>

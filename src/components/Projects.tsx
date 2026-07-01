@@ -67,19 +67,24 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 [perspective:1200px]">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group break-inside-avoid"
+              whileHover={{
+                y: -10,
+                rotateX: 2.5,
+                rotateY: -3,
+                z: 24,
+              }}
+              className="group break-inside-avoid [transform-style:preserve-3d]"
             >
-              <div className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300">
+              <div className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300 [transform-style:preserve-3d] group-hover:border-primary/40">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
+                  <div className="flex-1 [transform:translateZ(18px)]">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
@@ -89,7 +94,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4 [transform:translateZ(12px)]">
                   {project.stack.map((tech) => (
                     <Badge
                       key={tech}
@@ -102,14 +107,14 @@ const Projects = () => {
                 </div>
 
                 {project.referent && (
-                  <div className="mb-4 p-3 bg-muted/50 rounded-lg border border-border">
+                  <div className="mb-4 p-3 bg-muted/50 rounded-lg border border-border [transform:translateZ(10px)]">
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">Référent :</span> {project.referent}
                     </p>
                   </div>
                 )}
 
-                <div className="flex items-center justify-between pt-4 border-t border-border">
+                <div className="flex items-center justify-between pt-4 border-t border-border [transform:translateZ(14px)]">
                   <span className="text-sm text-muted-foreground">
                     {project.year}
                   </span>

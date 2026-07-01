@@ -12,7 +12,7 @@ const Navigation = () => {
     { id: "hero", label: "Accueil" },
     { id: "about", label: "À propos" },
     { id: "skills", label: "Compétences" },
-    { id: "services", label: "Services" },
+    // { id: "services", label: "Services" },
     { id: "projects", label: "Projets" },
     { id: "experience", label: "Expérience" },
     { id: "education", label: "Formation" },
@@ -61,11 +61,10 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-card/95 backdrop-blur-md shadow-card"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -84,11 +83,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                  activeSection === item.id
+                className={`px-4 py-2 rounded-lg transition-all duration-300 ${activeSection === item.id
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -125,11 +123,10 @@ const Navigation = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
-                    className={`block w-full text-left px-4 py-3 rounded-lg transition-all ${
-                      activeSection === item.id
+                    className={`block w-full text-left px-4 py-3 rounded-lg transition-all ${activeSection === item.id
                         ? "bg-primary text-primary-foreground"
                         : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </motion.button>
