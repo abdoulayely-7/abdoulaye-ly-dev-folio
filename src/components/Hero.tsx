@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MessageCircleMore, Download } from "lucide-react";
@@ -24,12 +25,23 @@ const Hero = () => {
     return hour < 18 ? "Bonjour" : "Bonsoir";
   };
 
+  const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    event.currentTarget.style.setProperty("--mouse-x", `${x}%`);
+    event.currentTarget.style.setProperty("--mouse-y", `${y}%`);
+  };
 
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20 px-4"
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4"
     >
+      <div className="aurora-green absolute -inset-24 opacity-80 blur-3xl" />
+      <div className="mouse-grid absolute inset-0 opacity-80" />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Photo */}
@@ -143,11 +155,13 @@ const Hero = () => {
             >
               <TypeAnimation
                 sequence={[
-                  personal.role,
+                  "Développeur Fullstack",
                   2000,
-                  'Passionné par le développement web',
+                  "DevOps Engineer",
                   2000,
-                  'Expert en technologies modernes',
+                  "Développeur Frontend Mini Apps",
+                  2000,
+                  "Architecte SaaS",
                   2000,
                 ]}
                 wrapper="h2"
@@ -176,7 +190,7 @@ const Hero = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant"
+                className="shimmer-hover bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant"
               >
                 <a
                   href={personal.WhatsApp}
@@ -194,7 +208,7 @@ const Hero = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
+                className="shimmer-hover border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
               >
                 <a
                   href="/CV_Abdoulaye_Ly.pdf"

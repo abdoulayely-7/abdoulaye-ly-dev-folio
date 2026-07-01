@@ -163,11 +163,20 @@ const Skills = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
-              className="group flex flex-col items-center justify-center p-4 bg-card rounded-lg border border-border hover:border-primary transition-all hover:shadow-lg"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group flex flex-col items-center justify-center p-4 bg-card rounded-lg border border-border hover:border-primary transition-all hover:shadow-elegant"
             >
-              <div className="mb-3 text-primary group-hover:scale-110 transition-transform">
+              <motion.div
+                animate={{ y: [0, -5, 0] }}
+                transition={{
+                  duration: 3.2 + (index % 4) * 0.25,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="mb-3 text-primary transition-all group-hover:drop-shadow-[0_0_14px_hsl(var(--primary)/0.75)]"
+              >
                 {getSkillIcon(skill.name)}
-              </div>
+              </motion.div>
               <span className="font-medium text-foreground text-center">{skill.name}</span>
             </motion.div>
           ))}

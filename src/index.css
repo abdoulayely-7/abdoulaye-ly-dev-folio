@@ -75,3 +75,77 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes aurora-shift {
+    0%, 100% {
+      transform: translate3d(-4%, -2%, 0) scale(1);
+      filter: hue-rotate(0deg);
+    }
+
+    50% {
+      transform: translate3d(4%, 3%, 0) scale(1.08);
+      filter: hue-rotate(10deg);
+    }
+  }
+
+  @keyframes subtle-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-120%) skewX(-18deg);
+    }
+
+    100% {
+      transform: translateX(220%) skewX(-18deg);
+    }
+  }
+
+  .aurora-green {
+    background:
+      radial-gradient(circle at 18% 22%, hsl(var(--primary) / 0.28), transparent 28%),
+      radial-gradient(circle at 78% 18%, hsl(178 78% 42% / 0.18), transparent 30%),
+      radial-gradient(circle at 52% 82%, hsl(142 76% 42% / 0.18), transparent 34%);
+    animation: aurora-shift 14s ease-in-out infinite;
+  }
+
+  .mouse-grid {
+    background-image:
+      radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(var(--primary) / 0.18), transparent 22rem),
+      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+    background-size: auto, 44px 44px, 44px 44px;
+  }
+
+  .float-soft {
+    animation: subtle-float 4s ease-in-out infinite;
+  }
+
+  .shimmer-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary-foreground) / 0.32), transparent);
+    opacity: 0;
+    transform: translateX(-120%) skewX(-18deg);
+  }
+
+  .shimmer-hover:hover::after {
+    opacity: 1;
+    animation: shimmer 0.85s ease;
+  }
+}

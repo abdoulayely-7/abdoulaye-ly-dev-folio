@@ -76,13 +76,15 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               whileHover={{
                 y: -10,
+                scale: 1.02,
                 rotateX: 2.5,
                 rotateY: -3,
                 z: 24,
               }}
               className="group break-inside-avoid [transform-style:preserve-3d]"
             >
-              <div className="bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300 [transform-style:preserve-3d] group-hover:border-primary/40">
+              <div className="relative overflow-hidden bg-card border border-border rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300 [transform-style:preserve-3d] group-hover:border-primary/40">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1 [transform:translateZ(18px)]">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
@@ -126,6 +128,17 @@ const Projects = () => {
                   >
                     <Github className="h-4 w-4" />
                     Voir sur GitHub
+                  </a>
+                </div>
+                <div className="absolute inset-x-4 bottom-4 translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-background/90 px-3 py-2 text-sm font-medium text-primary shadow-card backdrop-blur-md hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <Github className="h-4 w-4" />
+                    Code source
                   </a>
                 </div>
               </div>

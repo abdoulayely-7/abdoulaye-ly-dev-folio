@@ -62,12 +62,12 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-card"
+          ? "bg-card/90 backdrop-blur-xl shadow-card border-b border-border/60"
           : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16" : "h-20"}`}>
           <motion.button
             onClick={() => scrollToSection("hero")}
             className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
@@ -80,16 +80,26 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <button
+              <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 ${activeSection === item.id
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.97 }}
+                className={`group relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${activeSection === item.id
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                   }`}
               >
                 {item.label}
-              </button>
+                <span className="absolute inset-x-3 bottom-1 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+                {activeSection === item.id && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-primary"
+                    transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                  />
+                )}
+              </motion.button>
             ))}
             <ThemeToggle />
           </div>
