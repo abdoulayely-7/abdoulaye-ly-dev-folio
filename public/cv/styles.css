@@ -1,0 +1,244 @@
+/* Professional CV design tokens */
+:root {
+  --cv-primary: #059669;
+  --cv-primary-dark: #047857;
+  --cv-primary-soft: #ecfdf5;
+  --cv-ink: #0f172a;
+  --cv-muted: #475569;
+  --cv-border: #dbe4e8;
+  --cv-paper: #ffffff;
+  --cv-page: #f4f7f6;
+  --cv-shadow: 0 12px 32px rgba(15, 23, 42, 0.07);
+}
+
+/* Custom base rules and print styling */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+img, video, svg { max-width: 100%; height: auto; }
+
+.cv-page {
+  background:
+    radial-gradient(circle at 14% 8%, rgba(5, 150, 105, 0.08), transparent 28rem),
+    radial-gradient(circle at 88% 0%, rgba(20, 184, 166, 0.07), transparent 30rem),
+    var(--cv-page);
+  color: var(--cv-ink);
+}
+
+.dark .cv-page {
+  background:
+    radial-gradient(circle at 14% 8%, rgba(16, 185, 129, 0.12), transparent 28rem),
+    radial-gradient(circle at 88% 0%, rgba(20, 184, 166, 0.08), transparent 30rem),
+    #020617;
+}
+
+.cv-toolbar {
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.cv-shell {
+  position: relative;
+}
+
+.cv-card {
+  border-color: rgba(148, 163, 184, 0.28) !important;
+  box-shadow: var(--cv-shadow);
+}
+
+.cv-card:hover {
+  border-color: rgba(5, 150, 105, 0.28) !important;
+}
+
+.cv-identity-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--cv-primary), #14b8a6);
+}
+
+main h3 {
+  color: var(--cv-ink);
+}
+
+.dark main h3 {
+  color: #f8fafc;
+}
+
+main p,
+main li {
+  line-height: 1.62;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.skill-chip-btn {
+  border-radius: 999px !important;
+}
+
+.skill-chip-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.12);
+}
+
+/* Custom scrollbar for technical filters */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5);
+}
+
+.experience-card {
+  border-left: 4px solid rgba(5, 150, 105, 0.32) !important;
+}
+
+.experience-card:hover {
+  border-left-color: var(--cv-primary) !important;
+}
+
+.experience-card ul li::marker {
+  color: var(--cv-primary);
+}
+
+.cv-tag {
+  border-radius: 999px !important;
+}
+
+/* Print-specific layout optimizing */
+@media print {
+  /* Hide web-only interactive components */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Reset background colors and text for standard paper printing */
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10.5px !important;
+    line-height: 1.36 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .cv-page {
+    background: #ffffff !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Force multi-column layout to render side-by-side even on paper */
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Remove scroll overflow wrappers */
+  .table-wrapper {
+    overflow-x: visible !important;
+  }
+
+  /* Prevent page breaks inside cards, headings, and sections */
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  h1, h2, h3, .section-title {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  p, li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Compact padding for print */
+  .print-compact {
+    padding: 0.42rem !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  /* Ensure text is highly readable */
+  .text-shadow-none {
+    text-shadow: none !important;
+  }
+
+  /* Force background colors to print if needed or convert to clean borders */
+  .print-border {
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+    border-radius: 0.55rem !important;
+  }
+
+  .cv-identity-card::before {
+    width: 3px !important;
+  }
+
+  .experience-card {
+    border-left: 3px solid #059669 !important;
+  }
+
+  .skill-chip-btn,
+  .cv-tag {
+    border: 1px solid #d1d5db !important;
+    color: #1f2937 !important;
+    background: #f9fafb !important;
+  }
+
+  .project-dimmed {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  /* Page margins */
+  @page {
+    size: A4;
+    margin: 0.9cm;
+  }
+}
+
+/* Animations for interaction */
+.transition-all-300 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glowing active skill chips */
+.skill-active {
+  background-color: var(--cv-primary) !important;
+  color: white !important;
+  border-color: var(--cv-primary) !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.22);
+}
+
+/* Highlight matching projects */
+.project-highlight {
+  border-color: var(--cv-primary) !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.09), var(--cv-shadow);
+  transform: translateY(-2px);
+}
+
+.project-dimmed {
+  opacity: 0.4;
+  filter: grayscale(40%);
+}

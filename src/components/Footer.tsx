@@ -36,13 +36,13 @@ const Footer = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
               >
                 <a
-                  href="/CV_Abdoulaye_Ly.pdf"
+                  href="/cv/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Télécharger CV
+                  Voir mon CV
                 </a>
               </Button>
           </motion.div>
