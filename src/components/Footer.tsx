@@ -30,21 +30,21 @@ const Footer = () => {
             </h3>
             <p className="text-muted-foreground mb-4">{personal.role}</p>
             <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
+            >
+              <a
+                href="/abdoulaye_ly_fullstack.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
               >
-                <a
-                  href="/abdoulaye_ly_fullstack.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Voir mon CV
-                </a>
-              </Button>
+                <Download className="mr-2 h-5 w-5" />
+                Voir mon CV
+              </a>
+            </Button>
           </motion.div>
 
           {/* Quick Links */}
