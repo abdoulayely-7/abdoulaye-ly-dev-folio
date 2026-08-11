@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { Github, Linkedin, Mail, Download, Heart, Code, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
-import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const ref = useRef(null);
@@ -144,7 +143,7 @@ const Footer = () => {
         >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
             © {currentYear} {personal.name}. Créé par{" "}
-            <img src={logo} alt="Abdoulaye Ly logo" className="inline-block h-4 w-auto" />
+            <Code className="h-4 w-4 text-primary fill-primary" />  LyDevTech<Code className="h-4 w-4 text-primary fill-primary" />
           </p>
         </motion.div>
       </div>

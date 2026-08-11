@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
-import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,11 +70,11 @@ const Navigation = () => {
         <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16" : "h-20"}`}>
           <motion.button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2"
+            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src={logo} alt="Abdoulaye Ly logo" className="h-8 w-auto" />
+            LyDevTech
           </motion.button>
 
           {/* Desktop Navigation */}
