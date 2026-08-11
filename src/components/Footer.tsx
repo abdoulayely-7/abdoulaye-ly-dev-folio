@@ -36,7 +36,7 @@ const Footer = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
               >
                 <a
-                  href="/cv/index.html"
+                  href="/abdoulaye_ly_fullstack.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
