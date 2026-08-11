@@ -63,8 +63,8 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-card/90 backdrop-blur-xl shadow-card border-b border-border/60"
-          : "bg-transparent"
+        ? "bg-card/90 backdrop-blur-xl shadow-card border-b border-border/60"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-4">
@@ -87,8 +87,8 @@ const Navigation = () => {
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.97 }}
                 className={`group relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${activeSection === item.id
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
                   }`}
               >
                 {item.label}
@@ -135,8 +135,8 @@ const Navigation = () => {
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
                     className={`block w-full text-left px-4 py-3 rounded-lg transition-all ${activeSection === item.id
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                       }`}
                   >
                     {item.label}
